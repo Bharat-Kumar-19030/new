@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <title> grid example</title>
+    <style>     
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:0;
+        padding:0;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-areas:"header header"
+        "sidebar main"
+        "footer footer";/*shows the template-->*/
+        grid-template-rows: auto 1fr auto;/*tells the dimension 1 fr means it will cover all the portion */
+        grid-template-columns: 250px 1fr;
+        height:100vh;
+    }
+    .header{
+        grid-area: header;/*means i am talking about the headerof grid templte ares*/
+        background-color: rgb(100, 207, 100);
+        color:white;
+        text-align: center;
+        padding:1rem;
+    }
+    .sidebar{
+        grid-area:sidebar;
+        background-color: #f4f4f4;
+        padding:1rem;
+        border-right: 1px solid #ddd;
+
+    }
+    .footer{
+        grid-area: footer;
+        background-color: black;
+        padding:1rem;
+        color: white;
+        text-align: center;
+    }
+    .main{
+        grid-area:main;
+        padding:1rem;
+        background-color: black;
+        margin:10px;
+        color: white;
+        }
+    @media (max-width: 768px){
+        .grid-container{
+            grid-template-areas: 
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            /* margin:10px */
+        }
+        .sidebar{
+            border-right:none;
+            border-top:1px solid #ddd;
+            background-color: rgb(165, 233, 233);
+            
+        }
+        .sidebar div a{
+            text-decoration: none;
+            color:brown;
+            font:bold;
+            font-size: larger;
+
+        }
+        .sidebar div{
+            text-align: center;
+            
+            
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">Header</header>
+        <aside class="sidebar">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">Contact us</a></div>
+            <div><a href="#">About us</a></div>
+            <div><a href="#">Say Thanks!</a></div>
+        </aside>
+        <main class="main">this is main</main>
+        <footer class="footer">this is footer</footer>
+       
+    </div>
+    
+</body>
+</html>

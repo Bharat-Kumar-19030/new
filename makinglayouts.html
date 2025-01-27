@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:0;
+        padding:0;
+    }
+        .grid-container{
+            display:grid;
+            grid-template-areas: "logo header header"
+            "sidebar main calender"
+            "contactus contactus chatwithus";
+            grid-template-rows: 10% auto 20%;
+            grid-template-columns: auto auto auto;
+            height:100vh;
+        }
+        .logo{
+            grid-area: logo;
+            background-color: aqua;
+            text-align:center;
+            padding:1rem;
+            place-content: center;
+        }
+        .header{
+        grid-area: header;/*means i am talking about the headerof grid templte ares*/
+        background-color: rgb(100, 207, 100);
+        color:white;
+        text-align: center;
+        padding:1rem;
+        place-content: center;
+        }
+        .chatwithus{
+            grid-area: chatwithus;
+            background-color: antiquewhite;
+            text-align: center;
+            padding :1rem;
+            place-content: center;
+
+
+        }
+        .contactus{
+            grid-area: contactus;
+            background-color:rgb(142, 243, 243);
+            text-align: center;
+            padding :1rem;
+            place-content: center;
+            
+
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: antiquewhite;
+            text-align: center;
+            padding :1rem;
+            place-content: center;
+            
+
+        }
+        .main{
+            grid-area: main;
+            background-color:rgb(255, 205, 139);
+            text-align: center;
+            padding :1rem;
+            place-content: center;
+            
+
+        }
+        .calender{
+            grid-area: calender;
+            background-color: rgb(182, 153, 216);
+            text-align: center;
+            padding :1rem;
+            place-content: center;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <span class="logo">logo</span>
+        <span class="header">header</span>
+        <span class="sidebar">sidebar</span>
+        <span class="main">main</span>
+        <span class="calender">calender</span>
+        <span class="contactus">contact</span>
+        <span class="chatwithus">chat</span>
+    </div>
+</body>
+</html>
